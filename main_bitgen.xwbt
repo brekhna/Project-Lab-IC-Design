@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/iffat/Desktop/display_module/main.ncd
+OUTFILE=/home/iffat/Desktop/display_module/main.bit
+FAMILY=Zynq
+PART=xc7z020-3clg484
+WORKINGDIR=/home/iffat/Desktop/display_module
+LICENSE=WebPack
+USER_INFO=211189910_0_0_558

@@ -1,0 +1,29 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jun 27 14:26:04 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "DB<3>" LOCATE = SITE "W11" LEVEL 1;
+COMP "DB<4>" LOCATE = SITE "V9" LEVEL 1;
+COMP "DB<5>" LOCATE = SITE "V10" LEVEL 1;
+COMP "DB<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "DB<7>" LOCATE = SITE "W8" LEVEL 1;
+COMP "gclk" LOCATE = SITE "Y9" LEVEL 1;
+COMP "RS" LOCATE = SITE "AB9" LEVEL 1;
+COMP "RW" LOCATE = SITE "AB10" LEVEL 1;
+COMP "E" LOCATE = SITE "AB11" LEVEL 1;
+COMP "reset" LOCATE = SITE "F22" LEVEL 1;
+COMP "DB<0>" LOCATE = SITE "V12" LEVEL 1;
+COMP "DB<1>" LOCATE = SITE "W12" LEVEL 1;
+COMP "DB<2>" LOCATE = SITE "W10" LEVEL 1;
+TIMEGRP GCLK = BEL "clock_gen/counter_10K_12" BEL "clock_gen/counter_10K_11"
+        BEL "clock_gen/counter_10K_10" BEL "clock_gen/counter_10K_9" BEL
+        "clock_gen/counter_10K_8" BEL "clock_gen/counter_10K_7" BEL
+        "clock_gen/counter_10K_6" BEL "clock_gen/i_clk_10K" BEL
+        "clock_gen/counter_10K_0" BEL "clock_gen/counter_10K_1" BEL
+        "clock_gen/counter_10K_2" BEL "clock_gen/counter_10K_3" BEL
+        "clock_gen/counter_10K_4" BEL "clock_gen/counter_10K_5" BEL
+        "gclk_BUFGP/BUFG";
+TS_GCLK = PERIOD TIMEGRP "GCLK" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,73 @@
+Release 14.7 ngdbuild P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc hardware.ucf -p xc7z020-clg484-3 main.ngc
+main.ngd
+
+Reading NGO file "/home/iffat/Desktop/display_module/main.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "hardware.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET GCLK				TNM_NET=GCLK;>
+   [hardware.ucf(55)]: NET "GCLK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_GCLK = PERIOD GCLK
+   100.00MHz HIGH 50 %;> [hardware.ucf(56)]: Unable to find an active 'TNM' or
+   'TimeGrp' constraint named 'GCLK'.
+
+ERROR:ConstraintSystem:59 - Constraint <NET GCLK          LOC = Y9   |>
+   [hardware.ucf(70)]: NET "GCLK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET GCLK          LOC = Y9   |> [hardware.ucf(70)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <IOSTANDARD=LVCMOS33;>
+   [hardware.ucf(70)]: NET "GCLK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:191 - The TNM 'GCLK', does not directly or indirectly
+   drive any flip-flops, latches and/or RAMS and cannot be actively used by the
+   referencing Period constraint 'TS_GCLK'. If clock manager blocks are directly
+   or indirectly driven, a new TNM constraint will not be derived even though
+   the referencing constraint is a PERIOD constraint unless an output of the
+   clock manager drives flip-flops, latches or RAMs. This TNM is used in the
+   following user PERIOD specification:
+   <TIMESPEC TS_GCLK = PERIOD GCLK 100.00MHz HIGH 50 %;> [hardware.ucf(56)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_GCLK = PERIOD GCLK 100.00MHz HIGH 50 %;> [hardware.ucf(56)]
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     3
+  Number of warnings:   4
+
+Total memory usage is 141816 kilobytes
+
+Total REAL time to NGDBUILD completion:  8 sec
+Total CPU time to NGDBUILD completion:   8 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "main.bld"...

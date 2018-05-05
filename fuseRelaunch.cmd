@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/iffat/Desktop/display_module/testbench_isim_beh.exe" -prj "/home/iffat/Desktop/display_module/testbench_beh.prj" "testbench" 

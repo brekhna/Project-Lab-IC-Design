@@ -1,0 +1,1 @@
+vhdtdtfi -prj display_module -o /home/iffat/Desktop/display_module/mux_4x1.vhi -module mux_4x1 -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work mux_4x1.vhd 
